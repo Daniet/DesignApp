@@ -1,0 +1,20 @@
+{
+  "name": "web",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.99.0",
+    "d3": "^4.10.2",
+    "google-material-icons": "^2.2.0",
+    "foundation-icon-fonts": "*"
+  }
+}
