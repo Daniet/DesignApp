@@ -22,7 +22,8 @@
         "../bower_components/foundation-icon-fonts/_foundation-icons.scss",
         "../bower_components/google-material-icons/google-material-icons.min.css",
         "../bower_components/materialize/sass/materialize.scss",
-        "styles.scss"
+        "styles.scss",
+        "../node_modules/dragula/dist/dragula.css"
       ],
       "scripts": [
         "../bower_components/d3/d3.min.js",

@@ -1,0 +1,15 @@
+<div class="row container-worktable">
+  <div class="col s2 m1"></div>
+  <div class="col s8 m10 z-depth-3 worktable" [dragula]='"bag-components"'>
+  </div>
+  <div class="col s2 m1 bar-components" [dragula]='"bag-components"'>
+    <a *ngFor="let item of items" class="col s12 btn btn-flat">
+      <i class="material-icons">
+        {{ item }}
+      </i>
+    </a>
+  </div>
+  <div class="col s2">
+    {{ mgs }}
+  </div>
+</div>
