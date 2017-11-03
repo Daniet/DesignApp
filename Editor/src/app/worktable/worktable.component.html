@@ -1,6 +1,37 @@
 <div class="row container-worktable">
-  <div class="col s2 m1"></div>
-  <div class="col s8 m10 worktable" [dragula]='"bag-components"'>
+  <div class="col s2 m1">
+    <div class="col s12 btn btn-flat waves-effect waves-light">
+      <i class="material-icons">
+        near_me
+      </i>
+    </div>
+    <div class="col s12 btn btn-flat waves-effect waves-light">
+      <i class="material-icons">
+        insert_link
+      </i>
+    </div>
+    <div class="col s12 btn btn-flat waves-effect waves-light">
+      <i class="material-icons">
+        format_color_fill
+      </i>
+    </div>
+    <div class="col s12 btn btn-flat waves-effect waves-light">
+      <i class="material-icons">
+        3d_rotation
+      </i>
+    </div>
+    <div class="col s12 btn btn-flat waves-effect waves-light">
+      <i class="material-icons">
+        crop
+      </i>
+    </div>
+    <div class="col s12 btn btn-flat waves-effect waves-light">
+      <i class="material-icons">
+        tune
+      </i>
+    </div>
+  </div>
+  <div class="col s8 m10 worktable row" [dragula]='"bag-components"'>
   </div>
   <div class="col s2 m1 bar-components" [dragula]='"bag-components"'>
     <a *ngFor="let item of items" id="{{ item }}" class="col s12 btn btn-flat">
@@ -9,7 +40,7 @@
       </i>
     </a>
   </div>
-  <div class="col s2">
+  <div class="col s12">
     {{ mgs }}
   </div>
 </div>

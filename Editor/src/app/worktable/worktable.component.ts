@@ -16,7 +16,8 @@ export class WorktableComponent implements OnInit {
 
   mgs:string = ''
   items:string[] = [
-    'menu', 'format_shapes', 'note_add', 'content_paste', 'add_location', 'insert_chart', 'attach_file'
+    'menu', 'format_shapes', 'attach_file'
+    // 'menu', 'format_shapes', 'note_add', 'content_paste', 'add_location', 'insert_chart', 'attach_file'
   ]
 
   dic:object = {
@@ -61,16 +62,15 @@ export class WorktableComponent implements OnInit {
           let div = document.createElement('div')
 
           try{
-            table.insertBefore(div, workTable[0])
+            // table.insertBefore(div, workTable[0])
             this.htmlService.component({
               tag: div,
               component: this.dic[value[1].innerText]
             })
+            table.replaceChild(div, workTable[0])
           }catch(ex){
-            console.log(ex)
+            console.error(ex)
           }
-
-          workTable[0].remove()
         }
       }
 

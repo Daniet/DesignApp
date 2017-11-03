@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+
+.worktable{
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 5px;
+
+  div{
+    transition: 1s;
+    align-self: center;
+  }
+
+  @for $i from 1 through 12 {
+    .c#{$i} {
+      grid-column: span $i;
+    }
+  }
+
+  [text="justify"]{
+    p{
+      text-align: justify;
+    }
+  }
+  [text="center"]{
+    p{
+      text-align: center;
+    }
+  }
+  [text="right"]{
+    p{
+      text-align: right;
+    }
+  }
+}
+
+img.responsive-img, video.responsive-video{
+  width: 100%;
+}
