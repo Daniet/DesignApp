@@ -54,14 +54,16 @@ export class HtmlService{
     img.setAttribute('class', 'responsive-img')
 
     element.tag.appendChild(img)
-    element.tag.setAttribute('class', 'grid c3')
+    element.tag.setAttribute('class', 'grid')
+    element.tag.setAttribute('gl', '6')
 
     return element
   }
 
   component(element):any{
 
-    element.tag.setAttribute('class', 'grid c12')
+    element.tag.setAttribute('class', 'grid')
+    element.tag.setAttribute('gl', '24')
     switch(element.component){
       case 'nav':
           this.createMenu(element)

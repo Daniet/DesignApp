@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+$columns: 24;
+
 .worktable{
 
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat($columns, 1fr);
   grid-gap: 5px;
 
   div{
@@ -11,8 +13,8 @@
     align-self: center;
   }
 
-  @for $i from 1 through 12 {
-    .c#{$i} {
+  @for $i from 1 through $columns {
+    [gl="#{$i}"] {
       grid-column: span $i;
     }
   }

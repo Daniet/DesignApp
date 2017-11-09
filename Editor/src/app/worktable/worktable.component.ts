@@ -34,7 +34,21 @@ export class WorktableComponent implements OnInit {
     removeOnSpill: true
   }
 
+  editComponent:any
+
   htmlService:HtmlService;
+
+  selectElement(tag){
+    console.log(tag.path[1].getAttribute('gl'))
+    this.width = tag.path[1].getAttribute('gl')
+  }
+
+  width = 0
+
+  setWidth(){
+    console.log(this)
+    // this.editComponent.setAttribute('gl', this.width)
+  }
 
   constructor(private dragula:DragulaService){
 
@@ -60,6 +74,7 @@ export class WorktableComponent implements OnInit {
           let table = document.querySelector('.worktable')
           let workTable = document.querySelectorAll('.worktable a')
           let div = document.createElement('div')
+          div.addEventListener('click', this.selectElement)
 
           try{
             // table.insertBefore(div, workTable[0])
